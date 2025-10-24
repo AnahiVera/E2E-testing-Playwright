@@ -27,6 +27,10 @@ describe('Blog app', () => {
 
 
     describe('Login', () => {
+         beforeEach(async ({ page }) => {
+        await page.goto('http://localhost:5173')
+    })
+    
         test('succeeds with correct credentials', async ({ page }) => {
 
               //click en toogle Login form
